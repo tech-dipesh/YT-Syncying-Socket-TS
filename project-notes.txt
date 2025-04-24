@@ -1,0 +1,8 @@
+for the project first i setup the basic server on the both client and server side:
+for the server side i have used the @types/express and @types/cors. 
+with on the i have first use the http, and on the createServer=httpServer.createServer(app), and i have setup the basic, 
+io.on ("connection", (socket)),
+createServer.listen (for the listening the server)
+
+now on the client side i have used the react-router for the navlink, nanoid for the getting the unique string format id, socket.io-client (for using the socket.io-client on the client side.)
+
