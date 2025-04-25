@@ -16,8 +16,9 @@ const Input = ({onLinkSubmit}: inputSubmit) => {
 
   return (
     <>
+    <hr/>
     <form onSubmit={getLink}>
-    <input type="text" ref={Inputvalue} placeholder='Please input the youtuve video to watch together.' />
+    <input type="text" className='h-10 w-70 rounded-2xl bg-blue-600' ref={Inputvalue} placeholder='Please input the youtuve video to watch together.' />
     <br />
     
     <button type='submit'>Watch Together</button>

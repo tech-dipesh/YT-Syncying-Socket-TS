@@ -8,3 +8,21 @@ now on the client side i have used the react-router for the navlink, nanoid for 
 
 on the client side as of now, i have created a 6 files including the homepage where all 2 routes i added, Home.tsx, it just create a homepage, and anoother page is All where the both 2 routes i have setup , page.tsx where the entire page is stored of the create a separate room.
 inside that there is the inside page which is the video.tsx which the entire video component , inside there is another  input.tsx which the only input value and the button value, which stored also i have extracted the input value.
+
+
+on the app.tsx: 
+first my outer wrap is browserRoute and inside that it is Routes then i wrap the Route which i placed an the to routes, like this:         <Route path="/" element={<Home/>}/>
+
+now on the home.tsx,       <Link to={`/${idValue}`}><button>Create a new Server.</button></Link>
+ on the page.tsx i have used the {roomId} which is the useParams for getting the routes, and we will pas them on the, app.tsx for the routings, also we pas the roomid on the setcurrentroom default, 
+ also on the changing the url,  if user create a new dynamic url: 
+  const navigate=useNavigate()
+  const {roomId}=useParams()
+  const [currentroom, setcurrentroom] = useState(roomId || nanoid())
+  const newRoom=()=>{
+    const newRoomId=nanoid();
+    setcurrentroom(newRoomId)
+    navigate(`/${newRoomId}`)
+  };
+  
+(first i make the navigate button to naviagate the url, and i set the currentRoom, for usingit, then i set the onclick which is genarate new url, i have set the nanoid and set that nanoid to the current room and redirect to that url to user)
