@@ -1,12 +1,17 @@
 import  { FormEvent, useRef } from 'react'
+interface inputSubmit{
+    onLinkSubmit:(link: string)=>void
+}
 
-const Input = ({getLink}: {getLink: string}) => {
+const Input = ({onLinkSubmit}: inputSubmit) => {
   const Inputvalue = useRef<HTMLInputElement>(null)
   // ormEventHandler<T> | undefined
   
   const getLink=(e: FormEvent<HTMLFormElement>): void=>{
     e.preventDefault()
-    console.log("hello world", Inputvalue.current?.value);
+    const videoInput=Inputvalue.current?.value || '';
+    // console.log("hello world", Inputvalue.current?.value);
+    onLinkSubmit(videoInput)
   }
 
   return (

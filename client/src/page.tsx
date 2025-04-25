@@ -1,11 +1,21 @@
 import { nanoid } from "nanoid";
-import { NavLink } from "react-router";
-
+import Video from "./Video";
+import { useState } from "react";
+import { useParams } from "react-router";
 export default function Page(){
-  let nanoidValue: string=nanoid()
+  const {roomId}=useParams()
+  const [currentroom, setcurrentroom] = useState(roomId || nanoid())
+  const newRoom=()=>{
+    // nanoid()
+    setcurrentroom(nanoid())
+  };
   return (
-    <NavLink to={"/nanoidValue"}>
-      Random Id: {nanoid()}
-    </NavLink>
+  <main>
+    <h2>Noone will watch you, you can invite your any friends for the watch together any youtube video.</h2>
+    <hr/>
+    <h1>Your Room id is: {currentroom}</h1>
+    <button onClick={newRoom}>Generate a new room</button>
+    <Video/>
+  </main>
   )
 }

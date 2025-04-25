@@ -6,3 +6,5 @@ createServer.listen (for the listening the server)
 
 now on the client side i have used the react-router for the navlink, nanoid for the getting the unique string format id, socket.io-client (for using the socket.io-client on the client side.)
 
+on the client side as of now, i have created a 6 files including the homepage where all 2 routes i added, Home.tsx, it just create a homepage, and anoother page is All where the both 2 routes i have setup , page.tsx where the entire page is stored of the create a separate room.
+inside that there is the inside page which is the video.tsx which the entire video component , inside there is another  input.tsx which the only input value and the button value, which stored also i have extracted the input value.
