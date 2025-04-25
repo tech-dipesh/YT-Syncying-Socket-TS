@@ -11,6 +11,11 @@ const io=Server (createserver, {cors : {origin: "http://localhost:5173", Credent
 io.on("connection", (socket)=>{
   console.log("Successfully connected and your assigned task is", socket.id);
   socket.on("video", "video started")
+
+  io.emit("chat", {videoLink, pauseStatus, lengthStatus, volumeStatus, chats});
+  
+  
+  
   socket.emit("newUser", socket)
 })
 createserver.listen(path, ()=>{
