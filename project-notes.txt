@@ -26,3 +26,6 @@ now on the home.tsx,       <Link to={`/${idValue}`}><button>Create a new Server.
   };
   
 (first i make the navigate button to naviagate the url, and i set the currentRoom, for usingit, then i set the onclick which is genarate new url, i have set the nanoid and set that nanoid to the current room and redirect to that url to user)
+
+const io=new Server(createserver, {cors : {origin: "http://localhost:5173", Credential: true}})
+i can't directly use the Server i have to use thew new keyword before this. 

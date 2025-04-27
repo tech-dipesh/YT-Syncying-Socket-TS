@@ -8,6 +8,9 @@ export default function Video() {
   const [video, setvideo] = useState("");
   const [loading, setloading] = useState(false)
 
+  const [play, setplay] = useState<boolean>(false)
+  const [vcontrols, setvcontrols] = useState<boolean>(false)
+
   const handleList = (video: string) => {
     if(video===""){
       return <div>Please put the url</div>
@@ -32,8 +35,9 @@ color="black"
       <div className="absolute top-1/2 left-1/2 rounded-b-xl m-20 transform -translate-x-1/2 -translate-y-1/2">
         <ReactPlayer
         onReady={()=>setloading(false)}
+        playing={play}
           url={video}
-          controls={true}
+          controls={vcontrols}
         />
       </div>
           }
