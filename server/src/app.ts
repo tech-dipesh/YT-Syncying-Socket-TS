@@ -17,7 +17,7 @@ io.on("connection", (socket)=>{
 
   socket.join("roomId")
 
-  socket.on("message", ({room, video})=>{
+  socket.on("message", ({room, video})=>{ 
     console.log(room, video);
     io.to(room).emit("recieve-video", video)
   })
