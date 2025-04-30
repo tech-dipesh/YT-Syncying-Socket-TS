@@ -12,6 +12,7 @@ io.on("connection", (socket)=>{
   console.log("Successfully connected and your assigned task is", socket.id);
   socket.on("video", )
   console.log("Your socket id is", socket.id);
+  // socket.emit("chat", {videoLink, pauseStatus, lengthStatus, volumeStatus, chats});
   io.emit("chat", {videoLink, pauseStatus, lengthStatus, volumeStatus, chats});
 
 
