@@ -5,7 +5,7 @@ import Home from './home';
 import { io } from 'socket.io-client';
 
 function App() {
-  const socket=io("http://localhost:5173");
+  const socket=io("http://localhost:9000");
   return (
     <>
         <BrowserRouter>
